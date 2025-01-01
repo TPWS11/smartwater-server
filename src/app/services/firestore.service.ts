@@ -7,7 +7,6 @@ export class FirestoreService {
         const docRef = firestore.collection(collectionName).doc(); 
         await docRef.set({
             ...data,
-            flowRate: parseFloat(data.flowRate),
             time: Timestamp.now(), 
         });
 
